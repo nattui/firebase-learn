@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/form.css">
+  <title>Firebase Learning</title>
+  <script src="javascript/form.js" defer></script>
+</head>
+
+<body>
+  <form class="form">
+    <p class="form__logo">Firebase Learning</p>
+    <h1 class="form__title">Create your Account</h1>
+    <input class="form__input form__fname" type="text" placeholder="First name" required>
+    <input class="form__input form__lname" type="text" placeholder="Last name" required>
+    <input class="form__input form__username" type="text" placeholder="Username" minlength="4" maxlength="15" pattern="[0-9a-zA-Z-_]+" spellcheck="false">
+    <input class="form__input form__email" type="email" placeholder="Email" spellcheck="false" required>
+    <input class="form__input form__password" type="password" placeholder="Password" minlength="6" maxlength="100" required>
+    <button class="form__submit form__submit--blue" type="submit">Signup</button>
+  </form>
+</body>
+
+</html>
