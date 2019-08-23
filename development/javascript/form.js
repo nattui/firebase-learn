@@ -1,6 +1,10 @@
-const inputElements = document.querySelectorAll('.form__input');
 console.log('Titan!');
 
-for (const input of inputElements) {
-  console.log(input);
-}
+const inputElements = document.querySelectorAll('.form__input');
+const submitElement = document.querySelector('.form__submit');
+submitElement.addEventListener('click', () => {
+  for (const input of inputElements) {
+    console.log(input.value);
+  }
+  event.preventDefault();
+});
