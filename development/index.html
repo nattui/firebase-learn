@@ -8,11 +8,16 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/form.css">
   <title>Firebase Learning</title>
+  <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-app.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-auth.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-firestore.js" defer></script>
+  <script src="javascript/config.js" defer></script>
   <script src="javascript/form.js" defer></script>
 </head>
 
 <body>
-  <form class="form">
+  <a class="logout" href="#">Logout</a>
+  <form class="form" id="signup">
     <p class="form__logo">Firebase Learning</p>
     <h1 class="form__title">Create your Account</h1>
     <!-- <input class="form__input form__fname" type="text" placeholder="First name" required>
@@ -21,6 +26,14 @@
     <input class="form__input form__email" type="email" value="temp@gmail.com" placeholder="Email" spellcheck="false" required>
     <input class="form__input form__password" type="password" value="123456" placeholder="Password" minlength="6" maxlength="100" required>
     <button class="form__submit form__submit--blue" type="submit">Signup</button>
+  </form>
+
+  <form class="form" id="login">
+    <p class="form__logo">Firebase Learning</p>
+    <h1 class="form__title">Login to your Account</h1>
+    <input class="form__input form__email" type="email" value="temp@gmail.com" placeholder="Email" spellcheck="false" required>
+    <input class="form__input form__password" type="password" value="123456" placeholder="Password" minlength="6" maxlength="100" required>
+    <button class="form__submit form__submit--blue" type="submit">Login</button>
   </form>
 </body>
 
