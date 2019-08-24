@@ -5,9 +5,9 @@ const db = firebase.firestore();
 // Status
 auth.onAuthStateChanged(user => {
   if (user) {
-    console.log('The user is logged in!', user);
+    console.log(`${user.email} is logged in!`);
   } else {
-    console.log('The user is logged out!');
+    console.log('User is logged out!');
   }
 });
 
