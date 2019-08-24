@@ -13,17 +13,14 @@ auth.onAuthStateChanged(user => {
 
 
 // Signup
-const formElement = document.querySelector('#signup');
-formElement.addEventListener('submit', (event) => {
-  const email = document.querySelector('#signup .form__email').value;
-  const password = document.querySelector('#signup .form__password').value;
-  console.log(`email: ${email}, password: ${password}`);
+const signupStr = '.form__signup';
+const formSignup = document.querySelector(`${signupStr}`);
+formSignup.addEventListener('submit', (event) => {
+  const email = document.querySelector(`${signupStr} .form__email`).value;
+  const password = document.querySelector(`${signupStr} .form__password`).value;
 
   auth.createUserWithEmailAndPassword(email, password)
-    .then(cred => {
-      console.log(cred.user);
-      formElement.reset();
-    });
+    .then(formSignup.reset());
 
   event.preventDefault();
 });
@@ -38,12 +35,14 @@ logout.addEventListener('click', event => {
 
 
 // Login
-const login = document.querySelector('#login');
-login.addEventListener('submit', event => {
-  const email = document.querySelector('#login .form__email').value;
-  const password = document.querySelector('#login .form__password').value;
+const loginStr = '.form__login';
+const formLogin = document.querySelector(`${loginStr}`);
+formLogin.addEventListener('submit', event => {
+  const email = document.querySelector(`${loginStr} .form__email`).value;
+  const password = document.querySelector(`${loginStr} .form__password`).value;
+
   auth.signInWithEmailAndPassword(email, password)
-    .then(() => login.reset());
+    .then(() => formLogin.reset());
 
   event.preventDefault();
 });

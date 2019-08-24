@@ -17,26 +17,29 @@
 </head>
 
 <body>
-  <form class="form" id="signup">
+
+  <form class="form form__signup">
     <p class="form__logo">Firebase Learning</p>
     <h1 class="form__title">Create your Account</h1>
-    <input class="form__input form__fname" type="text" placeholder="First name">
+    <input class="form__input form__fname" type="text" placeholder="First name" autofocus>
     <input class="form__input form__lname" type="text" placeholder="Last name">
     <input class="form__input form__username" type="text" placeholder="Username" minlength="4" maxlength="15" pattern="[0-9a-zA-Z-_]+" spellcheck="false">
-    <input class="form__input form__email" type="email" value="temp@gmail.com" placeholder="Email address" spellcheck="false" required>
-    <input class="form__input form__password" type="password" value="123456" placeholder="Password (6+ characters)" minlength="6" maxlength="100" required>
+    <input class="form__input form__email" type="email" placeholder="Email" spellcheck="false" required>
+    <input class="form__input form__password" type="password" placeholder="Password" minlength="6" maxlength="100" required>
+    <input class="form__input form__confirm" type="password" placeholder="Confirm" minlength="6" maxlength="100">
     <button class="form__submit form__submit--blue" type="submit">Signup</button>
   </form>
 
-  <form class="form" id="login">
+  <form class="form form__login">
     <p class="form__logo">Firebase Learning</p>
     <h1 class="form__title">Login to your Account</h1>
-    <input class="form__input form__email" type="email" value="temp@gmail.com" placeholder="Email address" spellcheck="false" required>
-    <input class="form__input form__password" type="password" value="123456" placeholder="Password (6+ characters)" minlength="6" maxlength="100" required>
+    <input class="form__input form__email" type="email" value="temp@gmail.com" placeholder="Email" spellcheck="false" required>
+    <input class="form__input form__password" type="password" value="123456" placeholder="Password" minlength="6" maxlength="100" required>
     <button class="form__submit form__submit--blue" type="submit">Login</button>
   </form>
 
   <button class="form__submit form__submit--red logout">Logout</button>
+
 </body>
 
 </html>
